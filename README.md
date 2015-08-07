@@ -44,8 +44,8 @@ In addition to the typically-placed application Toolbar, Xcode has four main wor
 The Toolbar is a small collection of project-wide buttons and labels. They are:
 
 1. Close/Minimize/Maximize Window buttons (these are the red, yellow, and green dots standard to all OS X windows),
-2. The ▶︎ "**Run**" button (`⌘`+`R`) which builds and then runs the current scheme,
-3. The ◼︎ "**Stop**" button (`⌘`+`.`) which stops the running scheme or application,
+2. The ▶︎ "**Run**" button (`⌘` `R`) which builds and then runs the current scheme,
+3. The ◼︎ "**Stop**" button (`⌘` `.`) which stops the running scheme or application,
 4. The "**Scheme Menu**",
 	* The left half selects the current target,
 	* The right half selects the destination—the device or simulator you wish to run on, (**Note:** *If you connect an iOS device to your computer, Xcode will typically assume you want to run the build on that device and automatically select it as your destination. If you encounter an authorization error, this may be the cause of it. Selecting the simulator instead will not trigger the authorization check.*
@@ -79,7 +79,7 @@ The appropriately-named **Navigator area** is actually a stack of eight differen
 
 **Top Tip:** *An easy well to tell if you are in either an* `*.xcodeproj` *file or an* `*.xcworkspace` *file is by looking for multiple "blueprint" icons in the Project Navigator. If you see only one then you are currently inside a* `*.xcodeproj` *file and running a scheme that incorporates outside frameworks like CocoaPods such as Specta & Expecta will fail to build. If you are using CocoaPods and don't see a second "blueprint" icon labeled "Pods", then you need to close your project and open the* `*.xcworkspace` *file instead.*
 
-The folder icons indicate a "group". They are named "groups" instead of "folders" because this is a file structure internal to Xcode and separate from the operating system's file structure which uses directories, a.k.a. folders. You can create a group by going to the Status bar and selecting File —> New —> Group OR Group From Selection. Adding a file to a group does NOT move it around in your directory. You will not be making your own groups until later labs, but get used to calling them groups.
+The folder icons indicate a "group". They are named "groups" instead of "folders" because this is a file structure internal to Xcode and separate from the operating system's file structure which uses directories, a.k.a. folders. You can create a group by going to the Status bar and selecting `File` —> `New` —> `Group` OR `Group From Selection`. Adding a file to a group does NOT move it around in your directory. You will not be making your own groups until later labs, but get used to calling them groups.
 
 | Icon            | Navigator Pane | Description |
 |---------------------|:----------:|:------------|
@@ -94,7 +94,7 @@ The folder icons indicate a "group". They are named "groups" instead of "folders
 
 ### The Test Navigator
 
-After running a build utilizing your unit tests (`⌘U`), the Test navigator will populate itself with your test results. A green light means the test passed, a red light means it failed! Selecting a test by name in this navigator will load that test's file in the Code Editor at the relevant line for the selected test.
+After running a build utilizing your unit tests (`⌘` `U`), the Test navigator will populate itself with your test results. A green light means the test passed, a red light means it failed! Selecting a test by name in this navigator will load that test's file in the Code Editor at the relevant line for the selected test.
 
 ![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_test_overview.png)
 
@@ -108,7 +108,7 @@ This is the window which contains Xcode's text editor for writing code. The font
 
 ### The Gutter
 
-The left-most column in the Code Editor which contains the line numbers is known as the **Gutter**. Blue arrow-tabs present in the gutter are "**breakpoint indicators**". Breakpoints are a signal to the application to pause the processes for inspection. This allows you to freeze a moment in time of your application so you can look at exactly what's happening. This helps immensely with the debugging process.
+The left-most column in the Code Editor which contains the line numbers is known as the **Gutter**. Blue arrow-tabs present in the gutter are "**breakpoint indicators**". Breakpoints are a part of the debugging process that we'll teach you about later.
 
 ![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_debug_breakpoint_gutter.png)  
 **Above:** *Xcode when encountering a breakpoint.*
@@ -129,39 +129,18 @@ The debugger is usually tucked away while writing code, yet comes out to play al
 ![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_debug_overview.png)
 
 
-Don't fret, though. Understanding the debugger is a skill in itself. It's OK to feel intimidated by all the computery information it throws out! Right now we're just going to explain the different interface elements. Let's a closer look.
-
 ![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_debug_area_detail.png)
 
 The left window is the **Variable Viewer** which shows a drop-down list of all of your program's objects and instance variables held in memory at the current scope. We'll teach you how to review the information in this window.
 
-The right window is the **Console Output Viewer**. This is where your `NSLog`s will print out, and where your crash details will print out when an exception breakpoint is thrown. You can also enter the `po <#objectName#>` command into this window to get a **p**rint**o**ut of that object's description property, or you can also print out the result of a method with `po [<#objectName#> <#methodCall#>]`.
+The right window is the **Console Output Viewer**. This is where your `NSLog`s will print out.
 
-**// Flat-fact:** *If you've noticed the* `(lldb)` *ticker that trails the printouts in the Console Output Viewer, good eyes! [LLDB](http://lldb.llvm.org/) is the name of debugging program that's integrated into Xcode. It's part of the LLVM package and inherits from GDB which was developed by Richard Stallman in 1986.*
-
-
-| Icon | Program Execution Control Symbol |Description |
-|:----------------:|----------------------|:-----------|
-| ![][hide_debug]  | Hide/show Debug area | Allows you to hide the Debug area without reaching all the way across the screen to the Toolbar. |
-| ![][bkpnt_toggle]| Turn Breakpoints On/Off | If this icon is highlighted blue, your manual breakpoints will pause the build at run time. If the icon is empty, your manual breakpoints are turned off. This is a useful toggle if you have numerous breakpoints set so you can avoid de-activating them individually.|
-| ![][debug_play]  | Play      | Play button continues execution of the app.|
-| ![][debug_pause] | Pause     | Pause button suspends execution of the app.|
-| ![][step_over]   | Step Over | Step over will execute the current line of code, including any methods.|
-| ![][step_into]   | Step Into | If the current line of code calls a method, step into starts execution at the current line, and then stops when it reaches the first line of the a called method.|
-| ![][step_out]    | Step Out  | Step out executes the rest of the current method or function.|
-| ![][view_debug]  | Debug View Hierarchy | This loads a special viewer for observing the stack of view layers in a user interface. |
-| ![][loc_sim]     | Simulate a location | The tells the iOS simulator to feed to the application a set of pre-recorded GPS information for testing location services.|
-
-We'll teach your more about how to use the debugger effectively in the coming weeks. For now, just understand the layout of the tools well enough to locate the Console Output viewer. If you can only see the Variable (or vice-versa), the Console Output Viewer is likely hidden. There's a pair of show/hide buttons in the bottom right corner of the Debug area which governs these two viewers.
+We'll teach your more about how to use the debugger effectively in the next unit. For now, just understand the layout of the tools well enough to locate the Console Output viewer. If you can only see the Variable Viewer (or vice-versa), the Console Output Viewer is likely hidden. There's a pair of show/hide buttons in the bottom right corner of the Debug area which governs these two viewers.
 
 | Icon           | Debugger Configuration Button              |
 |:--------------:|--------------------------------------------|
 | ![][nav_left]  | Show or hide the **Variable Viewer**.      |
 | ![][nav_right] | Show or hide the **Console Output Viewer**.|
-
-## Practicum: *Your-First-NSLog*
-
-The next lesson titled *Your-First-NSLog* contains your first hands-on Xcode project. Even though the task it expects is rather simple, acquainting yourself with Xcode is a task in itself. While it isn't perfect, Xcode is one of the most fully functional IDEs in the developer ecosystem, combining a vast variety of tools with their owns depths of function. The layout of options, constantly changing with every update, can easily feel overwhelming to a new programmer. Get yourself acquainted with the current version of Xcode so you can more efficiently navigate your own tools!
 
 [nav_left]: https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_workspace_nav_left.png
 [nav_middle]: https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_workspace_nav_middle.png
