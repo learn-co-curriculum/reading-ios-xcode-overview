@@ -5,7 +5,6 @@
 ## Objectives
 1. Understand the concept of an Integrated Development Environment.
 2. Get oriented with the basic layout of Xcode.
-3. Become familiar enough with Xcode to accomplish the first lab, *Your-First-NSLog*.
 
 ## What is Xcode?
 
