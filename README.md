@@ -164,3 +164,5 @@ We'll teach your more about how to use the debugger effectively in the next unit
 [view_debug]: https://curriculum-content.s3.amazonaws.com/reading-ios-debugging/toolbar_viewDebugger.png
 [loc_sim]: https://curriculum-content.s3.amazonaws.com/reading-ios-debugging/toolbar_locationSimulator.png
 
+
+<a href='https://learn.co/lessons/reading-ios-xcode-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
