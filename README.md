@@ -116,7 +116,7 @@ The vertical line between the line numbers and your code allows you to fold or u
 
 ## 3. The Utilities Area
 
-The Utilies Area really shines in Interface Builder which we're not introducing to you just yet. In the Code Editor, however, it displays only either the File Inspector or the Quick Help guide.
+The Utilities Area really shines in Interface Builder which we're not introducing to you just yet. In the Code Editor, however, it displays only either the File Inspector or the Quick Help guide.
 
 * The **File Inspector** displays a set of information relevant to the current file such as directory path and target.
 * The **Quick Help** guide is immensely helpful. It provides a summary description of the cursor-selected class and several relevant hot links, specifically the link to Apple's Reference Guide on that class. This is often quicker than a google search and works offline, being stored locally as part of Xcode. You can access this database directly in Xcode's status bar by selecting Help —> Documentation and API Reference.
