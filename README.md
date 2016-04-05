@@ -25,7 +25,7 @@ Let's unpack some of the terminology in that last sentence:
 
 ## Xcode Anatomy 101
 
-**Note:** *If this is your first time using Xcode and would like a sample project to explore, go ahead and fork, clone, and open the lab in next the lesson titled* Your-First-NSLog.
+**Note:** *If this is your first time using Xcode and would like a sample project to explore, go ahead and fork, clone, and open the lab in the "Objective-C fundamentals" lesson titled* Your-First-NSLog.
 
 In addition to the typically-placed application Toolbar, Xcode has four main workspace windows. These are, in clockwise rotation from the left:
 
@@ -166,3 +166,5 @@ We'll teach your more about how to use the debugger effectively in the next unit
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview' title='Xcode: An Overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
