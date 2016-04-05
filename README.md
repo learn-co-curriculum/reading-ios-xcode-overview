@@ -76,7 +76,7 @@ The appropriately-named **Navigator area** is actually a stack of eight differen
 
 ![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/intro-to-xcode/xcode_navigator.png)
 
-**Top Tip:** *An easy well to tell if you are in either an* `*.xcodeproj` *file or an* `*.xcworkspace` *file is by looking for multiple "blueprint" icons in the Project Navigator. If you see only one then you are currently inside a* `*.xcodeproj` *file and running a scheme that incorporates outside frameworks like CocoaPods such as Specta & Expecta will fail to build. If you are using CocoaPods and don't see a second "blueprint" icon labeled "Pods", then you need to close your project and open the* `*.xcworkspace` *file instead.*
+**Top Tip:** *An easy way to tell if you are in either an* `*.xcodeproj` *file or an* `*.xcworkspace` *file is by looking for multiple "blueprint" icons in the Project Navigator. If you see only one then you are currently inside a* `*.xcodeproj` *file and running a scheme that incorporates outside frameworks like CocoaPods such as Specta & Expecta will fail to build. If you are using CocoaPods and don't see a second "blueprint" icon labeled "Pods", then you need to close your project and open the* `*.xcworkspace` *file instead.*
 
 The folder icons indicate a "group". They are named "groups" instead of "folders" because this is a file structure internal to Xcode and separate from the operating system's file structure which uses directories, a.k.a. folders. You can create a group by going to the Status bar and selecting `File` —> `New` —> `Group` OR `Group From Selection`. Adding a file to a group does NOT move it around in your directory. You will not be making your own groups until later labs, but get used to calling them groups.
 
@@ -166,3 +166,5 @@ We'll teach your more about how to use the debugger effectively in the next unit
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview' title='Xcode: An Overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
