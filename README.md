@@ -14,7 +14,7 @@ Xcode is the **Integrated Development Environment** (**IDE**) provided by Apple 
 
 Let's unpack some of the terminology in that last sentence:
 
-1. **Code Editor** - a text editor with specialized in handling code as text. Sublime Text is a prime example of a standalone code editor.
+1. **Code Editor** - a text editor that specializes in handling code as text. Sublime Text is a prime example of a standalone code editor.
 2. **Compiler** - this is a program that translates your code from Objective-C or Swift into machine language, the native language of the processor. When you hit "Run", your code is first compiled so it can then be handed to your computer's processor to execute. Xcode also contains a **Pre-Compiler** which scans your code *as you type it* for syntactical errors and other problems to reduce the likelihood that your build contains code that will cause a crash.
 3. **Debugger** - all code has errors. "Good Practice" guidelines and pre-compilers help reduce the likelihood of errors being written, but they happen. Good debugging tools allow the programmer to scan the code as processes are running, watching the application's elements act upon and change themselves to see where they collide.
 4. **Interface Builder** - specifically in Xcode this is the name of the suite that allows the use of Storyboards to create the visual layout of an user interface (UI) in a similar fashion to design and layout software.
@@ -168,3 +168,5 @@ We'll teach your more about how to use the debugger effectively in the next unit
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview' title='Xcode: An Overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/reading-ios-xcode-overview'>Xcode: An Overview</a> on Learn.co and start learning to code for free.</p>
